@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hey hi hello</title>
+
+  <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+
+<body>
+  <div class="container">
+    <div
+      class="tenor-gif-embed"
+      data-postid="9280094880712544242"
+      data-share-method="host"
+      data-aspect-ratio="1.009"
+      data-width="100%"
+    >
+      <a href="https://tenor.com/ldG50Ea81D4.gif">TT6688</a>
+      from
+      <a href="https://tenor.com/en-GB/users/tt6688">TT6688 GIFs</a>
+    </div>
+
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
+
+    <h2>Do you ___ me?</h2>
+    <p>please such bolna 🙄</p>
+
+    <div class="btn">
+      <a href="yes.html">Yes</a>
+      <a href="nu_1.html">No</a>
+    </div>
+  </div>
+<div class="rain-container"></div>
+
+<script>
+const container = document.querySelector(".rain-container");
+
+const hearts = ["@nod💟"];
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("rain-heart");
+  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+  // random position & speed
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+
+  container.appendChild(heart);
+
+  // remove after animation
+  setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>

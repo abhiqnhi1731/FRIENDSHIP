@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>thodi thodi cat bhi ho</title>
+
+<link rel="stylesheet" href="./stylesheet.css" />
+</head>
+<body>
+<div class="container">
+<div
+class="tenor-gif-embed"
+data-postid="5791067587249441293"
+data-share-method="host"
+data aspect ratio="1"
+data width="100%"
+>
+<a
+href="https://tenor.com/view/peach-goma-phone-gif-15974530976611222074"
+>Peach Goma Phone Sticker</a
+>from
+<a href="https://tenor.com/search/peach+goma-stickers"
+>Peach Goma stickers</a
+>
+</div>
+<script
+type="text/javascript"
+async
+src="https://tenor.com/embed.js"
+></script>
+
+<h2>Oh come on… how long will you keep acting pricey?😾</h2>
+<p>please ha bol do🥺</p>
+
+  <div class="btn">
+     <a href="yes.html">Yes</a>
+     <a href="#" id="move-random">No</a>
+  </div>
+</div>
+
+<script src="./javascript.js"></script>
+<div class="rain-container"></div>
+
+<script>
+const container = document.querySelector(".rain-container");
+
+
+const hearts = ["😾","😿","🙀","😼"];
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("rain-heart");
+  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+  // random position & speed
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+  container.appendChild(heart);
+
+  // remove after animation
+  setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>

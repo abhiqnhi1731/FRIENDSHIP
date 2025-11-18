@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> or owl ho tum</title>
+
+    <link rel="stylesheet" href="./stylesheet.css" />
+</head>
+<body>
+<div class="container">
+   <div
+      class="tenor-gif-embed"
+      data-postid="10619676323261536202"
+      data-share-method="host"
+      data aspect ratio="1.2"
+      data width="100%"
+    >
+<a
+href="https://tenor.com/view/couple forgive me.asking for forgiveness begging crying gif 15195810"
+>Couple Forgive Me Sticker</a
+>from
+<a href="https://tenor.com/search/couple-stickers">Couple Stickers</a>
+</div>
+<script
+type="text/javascript"
+async
+src="https://tenor.com/embed.js"
+></script>
+
+<h2>Ek last baar Soch lo🙃</h2>
+
+<div class="btn">
+<a href="yes.html">Yes</a>
+<a href="nu_3.html">No</a>
+</div>
+</div>
+<div class="rain-container"></div>
+
+<script>
+const container = document.querySelector(".rain-container");
+
+// hearts only ❤️
+const hearts = ["🤧","😢","😭"];
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("rain-heart");
+  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+  // random position & speed
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+  container.appendChild(heart);
+
+  // remove after animation
+  setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>
