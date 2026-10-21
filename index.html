@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./stylesheet.css">
 </head>
 
-
 <body>
   <div class="container">
     <div
@@ -37,31 +36,34 @@
       <a href="nu_1.html">No</a>
     </div>
   </div>
-<div class="rain-container"></div>
 
-<script>
-const container = document.querySelector(".rain-container");
+  <div class="rain-container"></div>
 
-const hearts = ["@nod💟"];
+  <script>
+    const container = document.querySelector(".rain-container");
 
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("rain-heart");
-  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    // Add or remove items here to change what falls
+    const words = ["Roshani", "Roshani 💟", "💟"];
+    const colors = ["#ff4d8d", "#ff85a2", "#ffffff"];
 
-  // random position & speed
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = Math.random() * 20 + 15 + "px";
-  heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    function createRain() {
+      const item = document.createElement("div");
+      item.classList.add("rain-heart");
+      item.textContent = words[Math.floor(Math.random() * words.length)];
 
-  container.appendChild(heart);
+      // random position, size, speed and color
+      item.style.left = Math.random() * 90 + "vw";
+      item.style.fontSize = Math.random() * 20 + 15 + "px";
+      item.style.animationDuration = Math.random() * 2 + 3 + "s";
+      item.style.color = colors[Math.floor(Math.random() * colors.length)];
 
-  // remove after animation
-  setTimeout(() => heart.remove(), 6000);
-}
+      container.appendChild(item);
 
-setInterval(createHeart, 200);
-</script>
+      // remove after animation
+      setTimeout(() => item.remove(), 6000);
+    }
 
+    setInterval(createRain, 200);
+  </script>
 </body>
 </html>
